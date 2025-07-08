@@ -16,6 +16,18 @@ def get_clean_quota(survey_id: int):
     return response.json()
 """
 """filter out sytem responses such as DK/NA, Invalid"""
+"""Get list of running surveys"""
+def get_running_surveys():
+    url = f"{ASKIA_BASE_URL}/SurveyTasks?status=Running"
+    headers = {
+        "Authorization": ASKIA_TOKEN
+    }
+
+    response = requests.get(url, headers=headers)
+    response.raise_for_status()
+
+    return response.json()
+
 def is_valid_label(label: str) -> bool:
     return all(x.lower() not in label.lower() for x in EXCLUDED)
 
