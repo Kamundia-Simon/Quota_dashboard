@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import QuotaDetails from './components/QuotaDetails';
+import SurveyList from './components/SurveyList';
 import './App.css';
 
 function App() {
