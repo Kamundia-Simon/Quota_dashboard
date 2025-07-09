@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.py[cod]
+*.sqlite3
+*.env
+.env
+.venv/
+venv/
+
+# Node.js
+node_modules/
+dist/
+build/
+
+# OS/Editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.log
+
+# Byte-compiled
+*.pyo
+*.pyd
+*.pyc
+
+# Local dev
+*.db
+*.sqlite
+*.bak
+*.swp
+*~
+

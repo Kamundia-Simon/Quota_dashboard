@@ -2,8 +2,8 @@
 
 from fastapi import FastAPI
 from fastapi_cache import FastAPICache
-from backend.survey import get_structured_quota
-from backend.list_surveys import get_running_surveys
+from models.survey import get_structured_quota
+from models.list_surveys import get_running_surveys
 
 from fastapi.middleware.cors import CORSMiddleware
 """
