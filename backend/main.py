@@ -11,10 +11,10 @@ from survey import  get_clean_quota
 """
 
 app = FastAPI()
-# 👇 Allow frontend (on localhost:5173) to access backend (on localhost:8000)
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173"],  # Frontend URL (adjust if needed)
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
