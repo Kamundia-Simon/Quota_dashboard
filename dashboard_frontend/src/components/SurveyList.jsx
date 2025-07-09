@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Search, Users, Refresh } from 'lucide-react';
+import { Search, Users,  RefreshCcw } from 'lucide-react';
 import SurveyCard from './SurveyCard';
 import { useSurveys } from '../hooks/useSurveys';
 
@@ -53,7 +53,7 @@ const SurveyList = ({ onSurveySelect }) => {
             disabled={loading}
             className="flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors disabled:bg-blue-400"
           >
-            <Refresh size={16} className={loading ? 'animate-spin' : ''} />
+            <RefreshCcw size={16} className={loading ? 'animate-spin' : ''} />
             Refresh
           </button>
         </div>
