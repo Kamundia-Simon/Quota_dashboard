@@ -1,5 +1,5 @@
 // API configuration
-const API_BASE_URL = 'http://localhost:8000/api'; // Update with your backend URL
+const API_BASE_URL = 'http://localhost:8000/api';
 
 // API service functions
 export const fetchSurveys = async () => {
