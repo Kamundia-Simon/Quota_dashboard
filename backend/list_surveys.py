@@ -28,7 +28,7 @@ def get_running_surveys() -> list:
             if summary["SurveyID"] and summary["Name"]:
                 running_summaries.append(summary)
         except Exception as e:
-        """log or skip malformed survey entries"""
+            """log or skip malformed survey entries"""
             continue
 
     return running_summaries
