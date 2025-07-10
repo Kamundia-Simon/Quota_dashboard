@@ -1,7 +1,7 @@
 // Date formatting utility
 export const formatDate = (dateString) => {
   if (!dateString) return 'N/A';
-  return new Date(dateString).toLocaleDateString('en-US', {
+  return new Date(dateString).toLocaleDateString('en-UK', {
     year: 'numeric',
     month: 'short',
     day: 'numeric'
@@ -15,8 +15,8 @@ export const getStatusColor = (status) => {
       return 'text-green-600 bg-green-50';
     case 'In progress':
       return 'text-blue-600 bg-blue-50';
-    default:
-      return 'text-gray-600 bg-gray-50';
+    case 'Maximum reached':
+      return 'text-green-600 bg-red-50';
   }
 };
 
@@ -37,7 +37,7 @@ export const getOverTargetColor = (allowOverTarget) => {
 };
 
 // Progress percentage calculation
-export const getProgressPercentage = (completed, maxTarget) => {
-  if (maxTarget === 0) return 0;
-  return Math.min((completed / maxTarget) * 100, 100);
+export const getProgressPercentage = (completed, minTarget) => {
+  if (minTarget === 0) return 0;
+  return Math.min((completed / minTarget) * 100, 100);
 };
