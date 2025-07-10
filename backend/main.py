@@ -21,7 +21,7 @@ app.add_middleware(
 )
 
 """Returns stractured JSON data from a particular survey ID"""
-@app.get("/survey/{survey_id}/quota")
+@app.get("/surveys/{survey_id}/quota")
 def structured_quota(survey_id: int):
     return get_structured_quota(survey_id)
 

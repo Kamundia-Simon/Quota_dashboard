@@ -1,10 +1,10 @@
 // API configuration
-const API_BASE_URL = 'http://localhost:8000/api';
+const API_BASE_URL = 'http://localhost:8000';
 
 // API service functions
 export const fetchSurveys = async () => {
   try {
-    const response = await fetch(`${API_BASE_URL}/surveys`);
+    const response = await fetch(`${API_BASE_URL}/surveys/running`);
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
