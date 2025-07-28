@@ -34,9 +34,8 @@ def line_state_status(code: int) -> str:
     return {
         4371: "In progress",
         49153: "Minimum reached",
-        53523: "In progress",
-        32768: "Minimum reached",
-        16: "In progress"
+        245761: "Maximum reached",
+        376833: "Over target",
     }.get(code, "Unknown")
 
 """Recursive function to parse all the quota questions and suquestion"""

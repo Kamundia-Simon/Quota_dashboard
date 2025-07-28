@@ -8,6 +8,7 @@ import {
   Eye,
 } from "lucide-react";
 import TrafficLight from "./Indicators";
+import { formatDate, getProgressPercentage } from "../utils/helpers";
 
 /**
  * Survey Table Component
@@ -42,26 +43,6 @@ const SurveyTable = ({
     ) : (
       <ChevronDown size={16} className="text-blue-600" />
     );
-  };
-
-  /**
-   * Format date for display
-   */
-  const formatDate = (dateString) => {
-    if (!dateString) return "N/A";
-    return new Date(dateString).toLocaleDateString("en-US", {
-      year: "numeric",
-      month: "short",
-      day: "numeric",
-    });
-  };
-
-  /**
-   * Calculate completion percentage
-   */
-  const getCompletionPercentage = (completed, target) => {
-    if (!target || target === 0) return 0;
-    return Math.round((completed / target) * 100);
   };
 
   /**
@@ -181,11 +162,10 @@ const SurveyTable = ({
                           showPercentage={false}
                         />
                         <span className="text-sm text-gray-600">
-                          {getCompletionPercentage(
+                          {getProgressPercentage(
                             genderQuota.completed,
                             genderQuota.target
-                          )}
-                          %
+                          )}%
                         </span>
                       </>
                     );

@@ -26,7 +26,7 @@ def structured_quota(survey_id: int):
     return get_structured_quota(survey_id)
 
 """Lists all running surveys"""
-@app.get("/surveys/running")
+@app.get("/surveys/")
 def list_surveys():
     return get_running_surveys()
 """

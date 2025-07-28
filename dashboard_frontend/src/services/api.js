@@ -4,7 +4,7 @@ const API_BASE_URL = 'http://localhost:8000';
 // API service functions
 export const fetchSurveys = async () => {
   try {
-    const response = await fetch(`${API_BASE_URL}/surveys/running`);
+    const response = await fetch(`${API_BASE_URL}/surveys/`);
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }

@@ -1,4 +1,6 @@
 import React from "react";
+import {getProgressPercentage} from "../utils/helpers";
+
 
 /**
  * Quota Progress Bar Component
@@ -15,15 +17,14 @@ const QuotaProgressBar = ({
   showPercentage = true,
 }) => {
   // Calculate completion percentage based on min target
-  const completionPercentage =
-    minTarget > 0 ? (completed / minTarget) * 100 : 0;
+  const completionPercentage = getProgressPercentage(completed, minTarget);
   const isOverTarget = completionPercentage > 100;
 
   // For display: cap the green portion at 100%
   const greenPercentage = Math.min(completionPercentage, 100);
 
   // Red portion: everything over 100%
-  const redPercentage = Math.max(completionPercentage - 100, 0);
+  const redPercentage = Math.max(completionPercentage - 100, 150);
 
   // Calculate how much red to show (cap at reasonable display limit)
   const maxDisplayPercentage = 150; // Show up to 150% total width

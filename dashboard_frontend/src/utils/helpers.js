@@ -12,11 +12,13 @@ export const formatDate = (dateString) => {
 export const getStatusColor = (status) => {
   switch (status) {
     case 'Minimum reached':
-      return 'text-green-600 bg-green-50';
+      return 'text-black-600 bg-green-100';
     case 'In progress':
-      return 'text-blue-600 bg-blue-50';
+      return 'text-black-600 bg-blue-100';
     case 'Maximum reached':
-      return 'text-green-600 bg-red-50';
+      return 'text-black-600 bg-red-100';
+    case 'Over target':
+      return 'text-black-600 bg-yellow-100'
   }
 };
 
@@ -24,20 +26,19 @@ export const getStatusColor = (status) => {
 export const getOverTargetColor = (allowOverTarget) => {
   switch (allowOverTarget) {
     case 'Always':
-      return 'text-green-600 bg-green-50';
+      return 'text-black-600 bg-blue-100';
     case 'Never':
-      return 'text-red-600 bg-red-50';
+      return 'text-black-600 bg-blue-100';
     case 'Agent decides':
-      return 'text-yellow-600 bg-yellow-50';
+      return 'text-black-600 bg-blue-100';
     case 'Survey routing':
-      return 'text-blue-600 bg-blue-50';
+      return 'text-black-600 bg-blue-100';
     default:
-      return 'text-gray-600 bg-gray-50';
+      return 'text-black-600 bg-blue-100';
   }
 };
 
 // Progress percentage calculation
 export const getProgressPercentage = (completed, minTarget) => {
-  if (minTarget === 0) return 0;
-  return Math.min((completed / minTarget) * 100, 100);
+  return Math.min((completed / minTarget) * 100, 150);
 };

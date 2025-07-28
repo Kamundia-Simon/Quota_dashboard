@@ -1,4 +1,5 @@
 import React from "react";
+import {getProgressPercentage} from "../utils/helpers";
 
 /**
  * Traffic Light Component
@@ -17,7 +18,7 @@ const TrafficLight = ({
   /**
    * Calculate completion percentage
    */
-  const percentage = target > 0 ? Math.min((completed / target) * 100, 100) : 0;
+ const percentage = getProgressPercentage(completed, target);
 
   /**
    * Determine traffic light color based on completion percentage
