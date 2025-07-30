@@ -18,7 +18,12 @@ function App() {
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       <div className="bg-white shadow-sm boarder-b boarder-gray-200 px 6 py-4">
         <div className="flex items-cenre justify-between ">
-          <div>
+          <div className="flex items-center space-x-4">
+            <svg width="160" height="50" viewBox="0 0 160 50" xmlns="http://www.w3.org/2000/svg">
+            <rect x="0" y="0" width="50" height="50" rx="8" ry="8" fill="#FFD43B" />
+            <text x="20" y="35" font-family="san-serif" font-size="32" font-weight="bold" fill="black">3</text>
+            <text x="50" y="35" font-family="Lexend" font-size="32" fill="black">Gem</text>
+            </svg>
             <h1 className="text-4xl font-bold text-gray-900 mb-2">
               Survey Management Dashboard
             </h1>
